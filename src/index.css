@@ -1,0 +1,17 @@
+:root {
+  font-family: Questrial, sans-serif;
+  background-color: #ffff;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.textFiled {
+  padding: 0px !important;
+}
+.Logo {
+  height: 100px !important;
+  width: 100px !important;
+  margin: 20px;
+}
