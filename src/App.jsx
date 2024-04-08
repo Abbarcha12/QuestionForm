@@ -253,7 +253,7 @@ const App = () => {
               alignItems={"center"}
               mt={10}>
               {showPackgae ? (
-                <Grid item xs={8} sm={8}>
+                <Grid item xs={11} sm={8}>
                   <Card sx={{ backgroundColor: "#ebf6fd" }}>
                     <CardContent>
                       <AnimatePresence>
