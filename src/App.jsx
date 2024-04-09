@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -236,14 +237,18 @@ const App = () => {
       ]);
       setshowPackgae(true);
     } else {
+      // No package found, set appropriate state
       setSuggestedPackage("No package suggested");
       setshowPackgae(false);
+      toast.error("No package suggested");
+      setIndex(-1);
     }
-    console.log(suggestedPackage);
   };
+
   useEffect(() => {
     setshowPackgae(false);
   }, []);
+
   return (
     <motion.div
       initial={{ y: 10, opacity: 0 }}
@@ -259,6 +264,7 @@ const App = () => {
           padding: "0px",
           margin: "0px",
         }}>
+        <Toaster />
         <motion.div
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -284,6 +290,7 @@ const App = () => {
                           transition={{ duration: 0.2 }}>
                           <Box
                             display="flex"
+                            flexDirection={"column"}
                             justifyContent={"space-between"}
                             justifyItems={"center"}
                             alignItems={"center"}
