@@ -317,7 +317,7 @@ const App = () => {
                                 fontSize: "16px",
                               }}
                               onClick={handleNext}>
-                              Starts
+                              Start
                             </Button>
                           </Box>
                         </motion.div>
